@@ -1,8 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;800;900&display=swap");
 
 @font-face {
   font-family: "Starjedi";
   src: url("./fonts/Starjedi.ttf");
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Outfit";
 }
 
 * {
@@ -11,8 +20,23 @@
   box-sizing: border-box;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: white;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: white;
+}
+
 html {
-  background-image: url("./background.jpg");
+  background-image: url("./bg1.jpg");
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -90,7 +114,17 @@ nav ul li:hover a {
   position: absolute;
   top: 40%;
   left: 50%;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
+
+.hero h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e8ff18,
+    0 0 30px #fff018, 0 0 40px #f0ff18, 0 0 55px #f0ff18, 0 0 75px #fffb18;
+  color: #ffffff;
+}
+
 .hero h2 {
   font-family: "Starjedi";
   font-size: 30px;
@@ -112,6 +146,95 @@ nav ul li:hover a {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   min-height: 1200px;
   width: 100%;
+}
+
+.wrapper {
+  width: 60%;
+  display: flex;
+  margin: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 4rem;
+}
+
+.article-box {
+  border-top: 5px solid rgb(119, 0, 0);
+  border-bottom: 5px solid rgb(119, 0, 0);
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(24, 24, 24, 0.5);
+}
+.article-footer {
+  padding: 2rem;
+  background-color: rgb(24, 24, 24);
+}
+.article-footer p {
+  color: white;
+}
+
+button {
+  --glow-color: rgb(236, 126, 126);
+  --glow-spread-color: rgba(255, 123, 123, 0.781);
+  --enhanced-glow-color: rgb(255, 206, 206);
+  --btn-color: rgb(136, 61, 61);
+  outline: none;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  margin-top: 1rem;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
 }

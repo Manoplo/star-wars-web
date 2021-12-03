@@ -15,6 +15,7 @@
     <title>Star Wapens</title>
   </head>
   <body>
+    <audio id="saberSound" src="/audio/SaberOn.mp3"></audio>
     <header>
       <div class="header-container">
         <h1>Star Wapens</h1>
@@ -29,7 +30,7 @@
       <div class="hero">
         <img src="./images/DVmain.jpg" alt="Darth Vader" />
         <h2>The return of</h2>
-        <h1>the SiTH</h1>
+        <h1 id="saber" onmouseover="playSound('saberSound')">the SiTH</h1>
         <p>Lord Vader is back</p>
       </div>
     </header>
@@ -175,13 +176,14 @@
             </div>
           </section>
           <section>
+            <h3>Galaxy Simulator <small>(drag the mouse over)</small></h3>
             <div id="box-canvas" class="canvas-container">
               <canvas id="c"></canvas>
             </div>
           </section>
           <section>
             <div class="article-photo-content">
-              <h3>Photo galery</h3>
+              <h3>Photo gallery</h3>
               <div class="photo-galery">
                 <div class="photo">
                   <img
@@ -222,7 +224,53 @@
               </div>
             </div>
           </section>
-
+          <section>
+            <h3>Obi-Wan Trailer (Coming in 2022)</h3>
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/2rt7fMY-Uyc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+          <section>
+            <h3>Other trailers for 2023</h3>
+            <div
+              class="video-container"
+              style="display: flex; flex-direction: row"
+            >
+              <iframe
+                width="49%"
+                style="
+                  margin-right: 4%;
+                  border-bottom: 5px solid rgb(170, 1, 1);
+                  border-top: 5px solid rgb(170, 1, 1);
+                "
+                height="300"
+                src="https://www.youtube.com/embed/Djo_91jN3Pk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="49%"
+                style="
+                  border-bottom: 5px solid rgb(1, 80, 170);
+                  border-top: 5px solid rgb(1, 80, 170);
+                "
+                height="300"
+                src="https://www.youtube.com/embed/8Qn_spdM5Zg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
           <section>
             <div id="box-canvas2" class="canvas-container">
               <canvas id="canvas"></canvas>
@@ -291,6 +339,11 @@
             alt=""
             width="100%"
           />
+          <audio
+            src="./audio/Star Wars- The Imperial March (Darth Vader's Theme).ogg"
+            muted
+            controls
+          ></audio>
           <div class="newsletter">
             <h3>Newsletter</h3>
             <hr />
@@ -310,6 +363,12 @@
           <h3>About us</h3>
           <hr />
           <p>Made with 🚀 by Manuel Mañas & Manuel Martín.</p>
+          <img
+            src="./images/by-nc-sa-ccLicense.png"
+            style="margin-top: 10px"
+            width="60%"
+            alt=""
+          />
         </div>
         <div class="footer-middle">
           <h3>Contact us</h3>
@@ -343,5 +402,6 @@
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/saber.js"></script>
   </body>
 </html>

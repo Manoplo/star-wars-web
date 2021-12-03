@@ -412,6 +412,11 @@ main section:nth-child(5) .article-photo-content .photo-galery .photo img {
   width: 100%;
 }
 
+iframe {
+  border-top: 5px solid rgb(5, 139, 0);
+  border-bottom: 5px solid rgb(5, 139, 0);
+}
+
 #box-canvas {
   width: 100%;
   height: 100%;
